@@ -1,0 +1,62 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CLICKY BIRD</title>
+</head>
+
+<body>
+    <h1>CLICKY BIRD</h1>
+
+
+    <div id="joining">
+        <button id="createBtn">CREATE GAME</button>
+        <div id="createGame">
+            <input id="createInp" type="text" class="input" autocomplete="off" placeholder="create room">
+            <button id="createAndStartGame">create</button>
+        </div>
+        <button id="joinBtn">JOIN GAME</button>
+        <div id="joinGame">
+            <input id="joinInp" type="text" class="input" autocomplete="off" placeholder="join room">
+            <button id="joinAndStartGame">join</button>
+        </div>
+    </div>
+
+
+    <div id="game">
+		<h2 id="roomName"></h2>
+        <div id="countdownDiv">
+            <h2 id="countdown">00</h2>
+        </div>
+        <div class="mainContainer" id="mainContainer">
+            <div class="players" id="myPlayer">
+                <div id="bird">
+                    <img id="initial" src="images/bird.png" alt="bird" width="250px">
+
+                </div>
+                <div id="button">
+                    <img id="notClicked" src="images/buttonNotClicked.png" alt="button">
+                    <img id="clicked" src="images/buttonClicked.png" alt="button">
+                </div>
+                <h2 id="my-clicks">My Clicks: 0</h2>
+            </div>
+            <div class="players" id="opponentPlayer">
+                <h2 id="opponent-clicks">Opponent's Clicks: 0</h2>
+            </div>
+        </div>
+
+        <div id="results">
+
+        </div>
+    </div>
+
+</body>
+<script src="/socket.io/socket.io.js"></script>
+<script src="script.js"></script>
+
+</html>

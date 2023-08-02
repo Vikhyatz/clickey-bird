@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+/* font-family: 'VT323', monospace; */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'VT323', monospace;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: wheat;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+/* joining */
+#joining {
+    text-align: center;
+}
+
+#joining input {
+    width: 200px;
+    height: 60px;
+    background-color: black;
+    color: white;
+    border: 0;
+    border-radius: 8px;
+    outline: 0;
+    transition: 0.3s;
+    font-size: 30px;
+    text-align: center;
+}
+
+#joining button {
+    width: 200px;
+    height: 60px;
+    background-color: black;
+    color: wheat;
+    border: 0;
+    border-radius: 8px;
+    outline: 0;
+    transition: 0.3s;
+    font-size: 30px;
+	margin: 10px;
+}
+
+#joining button:hover {
+    color: black;
+    background-color: wheat;
+    border: 1px solid black;
+}
+
+
+#createGame,
+#joinGame {
+    display: none;
+}
+
+.leaveBtn{
+	width: 200px;
+    height: 60px;
+    background-color: black;
+    color: wheat;
+    border: 0;
+    border-radius: 8px;
+    outline: 0;
+    transition: 0.3s;
+    font-size: 30px;
+	margin: 10px;
+}
+
+
+
+/* main game */
+#game {
+    text-align: center;
+    display: none;
+}
+
+h1 {
+    font-size: 45px;
+}
+
+#countdown {
+    font-size: 40px;
+	color: red;
+}
+
+.mainContainer {
+    display: flex;
+    gap: 50px;
+}
+
+.players {
+    width: 300px;
+    height: 430px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 15px;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+#opponentPlayer {
+    justify-content: center;
+}
+
+#button {
+    height: 150px;
+    pointer-events: none;
+}
+
+#clicked {
+    display: none;
+    width: 150px;
+    height: 150px;
+}
+
+#notClicked {
+    /* display: none; */
+    width: 150px;
+    height: 150px;
+}
+
+#punching {
+    display: none;
+}
+
+#results {
+    text-align: center;
+}
+
+@media only screen and (max-width: 625px) {
+    #mainContainer {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    #opponentPlayer {
+        height: fit-content;
+    }
+}
